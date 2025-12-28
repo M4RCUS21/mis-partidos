@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Privada</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        body { background: #1a1a1a; color: white; font-family: sans-serif; text-align: center; }
+        .video-container { margin: 20px auto; width: 95%; max-width: 800px; }
+        h1 { color: #00ff00; }
+    </style>
+</head>
+<body>
+    <h1>📺 Fútbol en Directo</h1>
+    <div class="video-container">
+        <video id="reproductor" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls preload="auto">
+            <source src="lista.m3u" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script>
+        var player = videojs('reproductor');
+    </script>
+</body>
+</html>
